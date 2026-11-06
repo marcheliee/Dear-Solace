@@ -1,0 +1,454 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A Letter for Berneth | Dear Solace</title>
+
+<style>
+
+/* GENERAL */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #E8D8C5;
+    color: #493528;
+    font-family: "Times New Roman", serif;
+}
+
+/* HEADER */
+
+header {
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #CBB69C;
+}
+
+header h1 {
+    font-size: 25px;
+    font-style: italic;
+    font-weight: normal;
+    margin: 0;
+}
+
+header span {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+/* MAIN CONTAINER */
+
+.container {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+/* QUESTION PAPER */
+
+.question-paper {
+    background: #FFFAF0;
+    width: 100%;
+    max-width: 500px;
+    padding: 50px 40px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* DECORATIVE LINE */
+
+.top-line {
+    width: 45px;
+    height: 1px;
+    background: #A98262;
+    margin: 0 auto 25px;
+}
+
+.label {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #A98262;
+}
+
+.question-paper h2 {
+    font-size: 36px;
+    font-style: italic;
+    font-weight: normal;
+    margin: 20px 0;
+}
+
+.intro {
+    font-size: 15px;
+    color: #80614B;
+    margin-bottom: 30px;
+}
+
+/* QUESTION */
+
+.question {
+    font-size: 19px;
+    line-height: 2;
+    color: #655143;
+    font-style: italic;
+    margin: 30px 0;
+}
+
+/* DIVIDER */
+
+.divider {
+    width: 55px;
+    height: 1px;
+    background: #CBB69C;
+    margin: 30px auto;
+}
+
+/* INPUT */
+
+input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #CBB69C;
+    background: #FFFDF8;
+    font-family: "Times New Roman", serif;
+    font-size: 17px;
+    text-align: center;
+    outline: none;
+    color: #493528;
+}
+
+input:focus {
+    border-color: #76513D;
+}
+
+/* BUTTON */
+
+button {
+    background: #76513D;
+    color: #FFFAF0;
+    border: none;
+    padding: 14px 28px;
+    margin-top: 18px;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #52301B;
+}
+
+/* ERROR MESSAGE */
+
+#error {
+    color: #A34D43;
+    font-size: 13px;
+    margin-top: 18px;
+}
+
+/* SECRET LETTER */
+
+#letter {
+    display: none;
+    background: #FFFAF0;
+    width: 85%;
+    max-width: 750px;
+    margin: 60px auto;
+    padding: 55px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* LETTER HEADING */
+
+.letter-label {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #A98262;
+}
+
+#letter h2 {
+    font-size: 38px;
+    font-weight: normal;
+    font-style: italic;
+    margin: 20px 0 40px;
+}
+
+/* LETTER PARAGRAPHS */
+
+#letter p {
+    font-size: 18px;
+    line-height: 1.9;
+    color: #655143;
+    margin-bottom: 25px;
+}
+
+/* SIGNATURE */
+
+.signature {
+    font-style: italic;
+    color: #A98262 !important;
+    margin-top: 40px;
+}
+
+/* BACK BUTTON */
+
+.back {
+    display: block;
+    width: fit-content;
+    margin: 35px auto 0;
+    padding: 13px 25px;
+    background: #76513D;
+    color: #FFFAF0;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #80614B;
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 600px) {
+
+    header h1 {
+        font-size: 21px;
+    }
+
+    header span {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .question-paper {
+        padding: 40px 25px;
+    }
+
+    .question-paper h2 {
+        font-size: 31px;
+    }
+
+    .question {
+        font-size: 17px;
+    }
+
+    #letter {
+        width: 90%;
+        padding: 30px 23px;
+        margin: 40px auto;
+    }
+
+    #letter h2 {
+        font-size: 31px;
+        margin-bottom: 30px;
+    }
+
+    #letter p {
+        font-size: 17px;
+        line-height: 1.8;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <h1>Dear Solace</h1>
+
+    <span>LETTERS FOR THE SOUL</span>
+
+</header>
+
+
+<!-- QUESTION PAGE -->
+
+<main class="container" id="questionPage">
+
+    <div class="question-paper">
+
+        <div class="top-line"></div>
+
+        <div class="label">
+            A LITTLE QUESTION
+        </div>
+
+        <h2>Do You Remember?</h2>
+
+        <p class="intro">
+            Before you read what's waiting inside,
+            there's one little thing you need to answer.
+        </p>
+
+        <div class="divider"></div>
+
+        <div class="question">
+
+            Who did Chloe draw on a
+            <br>
+            single 1/4 sheet of paper?
+
+        </div>
+
+        <div class="divider"></div>
+
+        <p class="intro">
+            Think carefully.
+        </p>
+
+        <input
+            type="password"
+            id="answer"
+            placeholder="Your answer..."
+            autocomplete="off"
+            onkeydown="if(event.key === 'Enter') checkAnswer()"
+        >
+
+        <br>
+
+        <button onclick="checkAnswer()">
+            OPEN MY LETTER
+        </button>
+
+        <p id="error"></p>
+
+    </div>
+
+</main>
+
+
+<!-- BERNETH'S LETTER -->
+
+<section id="letter">
+
+    <div class="letter-label">
+        A LETTER WRITTEN FOR YOU
+    </div>
+
+    <h2>Dear Berneth,</h2>
+
+    <p>
+        I know that sometimes you feel left out, like you don't belong or that you're somehow on the outside looking in. But I hope you know that none of those feelings define your place in our friendship. You're one of my girlies, and I hope you never forget that. You belong with us just as much as anyone else does.
+    </p>
+
+    <p>
+        I've never once thought of you as annoying or someone I'd rather not have around. Not even once. I know that you're sometimes quiet, and there are moments when it feels like you're just watching us from the sidelines. But I also understand that you enjoy your quiet moments, and sometimes you simply don't feel like talking to anyone. That's why I don't always approach you or start conversations. I don't want you to feel pressured to talk when you'd rather have some time for yourself.
+    </p>
+
+    <p>
+        But please don't mistake my silence for indifference. Just because I don't always approach you doesn't mean I don't want you around. You don't have to be talkative, funny, or constantly involved in every conversation to be an important part of our little circle. You can be quiet, you can be yourself, and you'll still have a place with us.
+    </p>
+
+    <p>
+        I love you, Berneth. We've been best friends for three years now, and honestly, I hope we get to celebrate many more years together. I hope the three of us, you, Chloe, and I, never grow apart. We've already made so many memories together, and I want us to have so many more. I want us to look back someday and laugh about all the ridiculous things we've done, the conversations we've had, and the little moments that made our friendship special.
+    </p>
+
+    <p>
+        And whenever you feel like you're being left behind, please remember that you're not. You are never just an extra person in this friendship. You're part of it, and things wouldn't be quite the same without you.
+    </p>
+
+    <p>
+        If you ever have problems, worries, or things that you can't seem to tell anyone else, you can always come to me, okay? You don't have to keep everything to yourself. I'll listen, even if you don't know how to explain what you're feeling. You don't have to find the perfect words, either. Sometimes, it's enough to simply let someone know that something isn't right.
+    </p>
+
+    <p>
+        I hope you become kinder to yourself, especially on the days when you feel like you're not enough. You are more than enough, Berneth. And I hope you never feel the need to change who you are just to feel included or accepted.
+    </p>
+
+    <p>
+        Also, let's not forget our very important future plans. WAHAHAHA. You're going to be the rich tita of my future children, and there's absolutely no negotiating about that. You'll spoil them, buy them whatever they want, and probably become their favorite tita. So, please take care of yourself because you have a very important position to fulfill.
+    </p>
+
+    <p>
+        Thank you for being my friend, Berneth. Thank you for staying with us for these three years. I'm genuinely happy that I got to know you, and I hope you know that you are loved, appreciated, and never forgotten.
+    </p>
+
+    <p>
+        I love you, Berneth. You have your place with us, always.
+    </p>
+
+    <p class="signature">
+        With love,<br>
+        Your fellow girlie.
+    </p>
+
+    <a href="for someone.html" class="back">
+        BACK TO ENVELOPES
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+    DEAR SOLACE · WORDS TO KEEP, WISDOM TO CARRY
+</footer>
+
+
+<script>
+
+/* CHECK THE ANSWER */
+
+function checkAnswer() {
+
+    let answer = document
+        .getElementById("answer")
+        .value
+        .trim()
+        .toLowerCase()
+        .replace(/[.!?]+$/, "");
+
+    if (answer === "kim dan") {
+
+        document.getElementById("questionPage")
+            .style.display = "none";
+
+        document.getElementById("letter")
+            .style.display = "block";
+
+        window.scrollTo(0, 0);
+
+    } else {
+
+        document.getElementById("error")
+            .textContent =
+            "Not quite, dear. Think about it again.";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
