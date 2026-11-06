@@ -1,0 +1,462 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A Letter for Rai | Dear Solace</title>
+
+<style>
+
+/* GENERAL */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #E8D8C5;
+    color: #493528;
+    font-family: "Times New Roman", serif;
+}
+
+/* HEADER */
+
+header {
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #CBB69C;
+}
+
+header h1 {
+    font-size: 25px;
+    font-style: italic;
+    font-weight: normal;
+    margin: 0;
+}
+
+header span {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+/* MAIN CONTAINER */
+
+.container {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+/* RIDDLE PAPER */
+
+.riddle-paper {
+    background: #FFFAF0;
+    width: 100%;
+    max-width: 500px;
+    padding: 50px 40px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    position: relative;
+}
+
+/* DECORATIVE LINE */
+
+.top-line {
+    width: 45px;
+    height: 1px;
+    background: #A98262;
+    margin: 0 auto 25px;
+}
+
+.label {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #A98262;
+}
+
+.riddle-paper h2 {
+    font-size: 36px;
+    font-style: italic;
+    font-weight: normal;
+    margin: 20px 0;
+}
+
+.intro {
+    font-size: 15px;
+    color: #80614B;
+    margin-bottom: 30px;
+}
+
+/* RIDDLE */
+
+.riddle {
+    font-size: 19px;
+    line-height: 2;
+    color: #655143;
+    font-style: italic;
+    margin: 30px 0;
+}
+
+/* DIVIDER */
+
+.divider {
+    width: 55px;
+    height: 1px;
+    background: #CBB69C;
+    margin: 30px auto;
+}
+
+/* INPUT */
+
+input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #CBB69C;
+    background: #FFFDF8;
+    font-family: "Times New Roman", serif;
+    font-size: 17px;
+    text-align: center;
+    outline: none;
+    color: #493528;
+}
+
+input:focus {
+    border-color: #76513D;
+}
+
+/* BUTTON */
+
+button {
+    background: #76513D;
+    color: #FFFAF0;
+    border: none;
+    padding: 14px 28px;
+    margin-top: 18px;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #52301B;
+}
+
+/* ERROR MESSAGE */
+
+#error {
+    color: #A34D43;
+    font-size: 13px;
+    margin-top: 18px;
+}
+
+/* SECRET LETTER */
+
+#letter {
+    display: none;
+    background: #FFFAF0;
+    width: 85%;
+    max-width: 750px;
+    margin: 60px auto;
+    padding: 55px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* LETTER HEADING */
+
+.letter-label {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #A98262;
+}
+
+#letter h2 {
+    font-size: 38px;
+    font-weight: normal;
+    font-style: italic;
+    margin: 20px 0 40px;
+}
+
+/* LETTER PARAGRAPHS */
+
+#letter p {
+    font-size: 18px;
+    line-height: 1.9;
+    color: #655143;
+    margin-bottom: 25px;
+}
+
+/* SIGNATURE */
+
+.signature {
+    font-style: italic;
+    color: #A98262 !important;
+    margin-top: 40px;
+}
+
+/* BACK BUTTON */
+
+.back {
+    display: block;
+    width: fit-content;
+    margin: 35px auto 0;
+    padding: 13px 25px;
+    background: #76513D;
+    color: #FFFAF0;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #80614B;
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 600px) {
+
+    header h1 {
+        font-size: 21px;
+    }
+
+    header span {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .riddle-paper {
+        padding: 40px 25px;
+    }
+
+    .riddle-paper h2 {
+        font-size: 31px;
+    }
+
+    .riddle {
+        font-size: 17px;
+    }
+
+    #letter {
+        width: 90%;
+        padding: 30px 23px;
+        margin: 40px auto;
+    }
+
+    #letter h2 {
+        font-size: 31px;
+        margin-bottom: 30px;
+    }
+
+    #letter p {
+        font-size: 17px;
+        line-height: 1.8;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <h1>Dear Solace</h1>
+
+    <span>LETTERS FOR THE SOUL</span>
+
+</header>
+
+
+<!-- RIDDLE PAGE -->
+
+<main class="container" id="riddlePage">
+
+    <div class="riddle-paper">
+
+        <div class="top-line"></div>
+
+        <div class="label">
+            A LITTLE CHALLENGE
+        </div>
+
+        <h2>A Riddle for You.</h2>
+
+        <p class="intro">
+            Before you read what's waiting inside,
+            there's something you need to figure out.
+        </p>
+
+        <div class="divider"></div>
+
+        <div class="riddle">
+
+            I fall from the sky, yet I never learn to fly.
+
+            <br>
+
+            I bring life to flowers, but sometimes make people cry.
+
+            <br>
+
+            I have no hands, yet I can touch your skin.
+
+            <br>
+
+            What am I?
+
+        </div>
+
+        <div class="divider"></div>
+
+        <p class="intro">
+            Think carefully, dear reader.
+        </p>
+
+        <input
+            type="password"
+            id="answer"
+            placeholder="Your answer..."
+            autocomplete="off"
+            onkeydown="if(event.key === 'Enter') checkAnswer()"
+        >
+
+        <br>
+
+        <button onclick="checkAnswer()">
+            OPEN MY LETTER
+        </button>
+
+        <p id="error"></p>
+
+    </div>
+
+</main>
+
+
+<!-- RAI'S LETTER -->
+
+<section id="letter">
+
+    <div class="letter-label">
+        A LETTER WRITTEN FOR YOU
+    </div>
+
+    <h2>Dear Rai,</h2>
+
+    <p>
+        Hi! Why are you here? And how on earth did you figure out the password? HSHSHS. Were you really that curious, or did you just happen to stumble upon this little corner of mine?
+    </p>
+
+    <p>
+        Well, since you're already here, I might as well tell you a few things.
+    </p>
+
+    <p>
+        You know, you've become one of my closest friends, even if you probably don't realize it. It's funny how someone you met through a screen, someone you don't even get to talk to every single day, can become such an important part of your life. We may not always have conversations, and there might be days when we barely know what's happening with each other, but that doesn't make our friendship any less meaningful to me.
+    </p>
+
+    <p>
+        I'm genuinely glad that I got to know you. Thank you for being someone I can share random conversations with, laugh with, and simply talk to whenever we get the chance. Even the simplest interactions can make an ordinary day a little better, and I hope you know that I appreciate them.
+    </p>
+
+    <p>
+        I don't want us to lose touch. I hope we get to remain friends for a long time, even as life gets busier and things begin to change. I hope we'll still be able to catch up after days, weeks, or even months of not talking, without feeling like we're strangers all over again.
+    </p>
+
+    <p>
+        And please, don't be afraid to reach out whenever things get difficult. You don't have to figure everything out on your own. If you ever need someone to listen, rant to, or distract you with the most random conversations imaginable, you can always talk to me. You don't have to be okay all the time, and you certainly don't have to pretend to be.
+    </p>
+
+    <p>
+        Take care of yourself, alright? Don't forget to rest, enjoy the little things, and give yourself credit for making it through another day. There's still so much waiting for you, and I hope you get to experience plenty of wonderful things along the way.
+    </p>
+
+    <p>
+        Lastly, thank you for being my friend. I may not say it often, but I'm grateful that our paths crossed, even if it was through a screen.
+    </p>
+
+    <p>
+        I hope life treats you kindly, Rai. And wherever life takes us, I hope this friendship remains one of those little things we can always look back on and smile about.
+    </p>
+
+    <p>
+        Stay safe, stay happy, and don't disappear on us.
+    </p>
+
+    <p class="signature">
+        Your friend,<br>
+        Someone who's glad to know you.
+    </p>
+
+    <a href="names.html" class="back">
+        BACK TO ENVELOPES
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+    DEAR SOLACE · WORDS TO KEEP, WISDOM TO CARRY
+</footer>
+
+
+<script>
+
+/* CHECK THE RIDDLE ANSWER */
+
+function checkAnswer() {
+
+    let answer = document
+        .getElementById("answer")
+        .value;
+
+    if (answer === "rain.") {
+
+        document.getElementById("riddlePage")
+            .style.display = "none";
+
+        document.getElementById("letter")
+            .style.display = "block";
+
+        window.scrollTo(0, 0);
+
+    } else {
+
+        document.getElementById("error")
+            .textContent =
+            "Not quite, dear reader. Think about it again.";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>

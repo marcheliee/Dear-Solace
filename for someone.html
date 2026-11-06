@@ -1,0 +1,550 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Find Your Name | Dear Solace</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #E8D8C5;
+    color: #493528;
+    font-family: "Times New Roman", serif;
+}
+
+/* HEADER */
+
+header {
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #CBB69C;
+}
+
+header h1 {
+    font-size: 25px;
+    font-style: italic;
+    font-weight: normal;
+}
+
+header span {
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+/* INTRO */
+
+.intro {
+    text-align: center;
+    padding: 65px 20px 35px;
+}
+
+.label {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #A98262;
+}
+
+.intro h2 {
+    font-size: 38px;
+    font-style: italic;
+    font-weight: normal;
+    margin: 15px 0;
+}
+
+.intro p {
+    font-size: 15px;
+    color: #80614B;
+    line-height: 1.8;
+}
+
+/* ENVELOPE GRID */
+
+.envelopes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 55px 20px;
+    width: 90%;
+    max-width: 650px;
+    margin: 45px auto 70px;
+}
+
+/* ENVELOPE CARD */
+
+.person {
+    text-decoration: none;
+    color: #493528;
+    text-align: center;
+    display: block;
+}
+
+.envelope {
+    width: 190px;
+    max-width: 100%;
+    aspect-ratio: 1.4 / 1;
+    margin: auto;
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+    transition: transform 0.3s ease;
+}
+
+.person:nth-child(even) .envelope {
+    animation-delay: 0.7s;
+}
+
+.person:hover .envelope {
+    transform: translateY(-10px) scale(1.05);
+}
+
+/* ENVELOPE BODY */
+
+.envelope svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+/* NAME */
+
+.person-name {
+    margin-top: 18px;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.person-caption {
+    margin-top: 6px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #A98262;
+}
+
+/* BACK BUTTON */
+
+.back {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 50px;
+    padding: 13px 25px;
+    background: #76513D;
+    color: #FFFAF0;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #80614B;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+/* ANIMATION */
+
+@keyframes float {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 480px) {
+
+    header h1 {
+        font-size: 21px;
+    }
+
+    header span {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .intro h2 {
+        font-size: 30px;
+    }
+
+    .envelopes {
+        width: 94%;
+        gap: 40px 10px;
+    }
+
+    .envelope {
+        width: 145px;
+    }
+
+    .person-name {
+        font-size: 17px;
+    }
+
+    .person-caption {
+        font-size: 8px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <h1>Dear Solace</h1>
+
+    <span>LETTERS FOR THE SOUL</span>
+
+</header>
+
+
+<!-- INTRODUCTION -->
+
+<section class="intro">
+
+    <div class="label">
+        A COLLECTION OF PERSONAL LETTERS
+    </div>
+
+    <h2>Find Your Name.</h2>
+
+    <p>
+        Somewhere among these envelopes,
+        there's a letter waiting just for you.
+        <br>
+        Find yours, dear reader.
+    </p>
+
+</section>
+
+
+<!-- PERSONAL ENVELOPES -->
+
+<section class="envelopes">
+
+
+<!-- ENVELOPE DESIGN TEMPLATE -->
+
+<!-- CHLOE -->
+
+<a href="chloe.html" class="person">
+
+<div class="envelope">
+
+<svg viewBox="0 0 200 140">
+
+<rect x="8" y="8" width="184" height="124"
+rx="12" fill="#FFF0E6"
+stroke="#C5A98F" stroke-width="5"/>
+
+<path d="M10 15 L100 85 L190 15"
+fill="none" stroke="#C5A98F"
+stroke-width="5" stroke-linecap="round"/>
+
+<path d="M10 125 L77 70 M190 125 L123 70"
+fill="none" stroke="#C5A98F"
+stroke-width="5" stroke-linecap="round"/>
+
+<path d="M100 112 C80 94 64 80 64 62
+C64 38 91 34 100 55
+C109 34 136 38 136 62
+C136 80 120 94 100 112Z"
+fill="#76513D"/>
+
+</svg>
+
+</div>
+
+<div class="person-name">Chloe</div>
+<div class="person-caption">A LETTER FOR YOU</div>
+
+</a>
+
+
+<!-- BERNETH -->
+
+<a href="berneth.html" class="person">
+
+<div class="envelope">
+
+<svg viewBox="0 0 200 140">
+
+<rect x="8" y="8" width="184" height="124"
+rx="12" fill="#FFF0E6"
+stroke="#C5A98F" stroke-width="5"/>
+
+<path d="M10 15 L100 85 L190 15"
+fill="none" stroke="#C5A98F"
+stroke-width="5" stroke-linecap="round"/>
+
+<path d="M10 125 L77 70 M190 125 L123 70"
+fill="none" stroke="#C5A98F"
+stroke-width="5" stroke-linecap="round"/>
+
+<path d="M100 112 C80 94 64 80 64 62
+C64 38 91 34 100 55
+C109 34 136 38 136 62
+C136 80 120 94 100 112Z"
+fill="#76513D"/>
+
+</svg>
+
+</div>
+
+<div class="person-name">Berneth</div>
+<div class="person-caption">A LETTER FOR YOU</div>
+
+</a>
+
+
+<!-- JASMINE -->
+
+<a href="jasmine.html" class="person">
+
+<div class="envelope">
+
+<svg viewBox="0 0 200 140">
+
+<rect x="8" y="8" width="184" height="124"
+rx="12" fill="#FFF0E6"
+stroke="#C5A98F" stroke-width="5"/>
+
+<path d="M10 15 L100 85 L190 15"
+fill="none" stroke="#C5A98F"
+stroke-width="5" stroke-linecap="round"/>
+
+<path d="M10 125 L77 70 M190 125 L123 70"
+fill="none" stroke="#C5A98F"
+stroke-width="5" stroke-linecap="round"/>
+
+<path d="M100 112 C80 94 64 80 64 62
+C64 38 91 34 100 55
+C109 34 136 38 136 62
+C136 80 120 94 100 112Z"
+fill="#76513D"/>
+
+</svg>
+
+</div>
+
+<div class="person-name">Jasmine</div>
+<div class="person-caption">A LETTER FOR YOU</div>
+
+</a>
+
+
+<!-- PRINCESS -->
+
+<a href="princess.html" class="person">
+
+<div class="envelope">
+
+<svg viewBox="0 0 200 140">
+
+<rect x="8" y="8" width="184" height="124"
+rx="12" fill="#FFF0E6"
+stroke="#C5A98F" stroke-width="5"/>
+
+<path d="M10 15 L100 85 L190 15"
+fill="none" stroke="#C5A98F"
+stroke-width="5" stroke-linecap="round"/>
+
+<path d="M10 125 L77 70 M190 125 L123 70"
+fill="none" stroke="#C5A98F"
+stroke-width="5" stroke-linecap="round"/>
+
+<path d="M100 112 C80 94 64 80 64 62
+C64 38 91 34 100 55
+C109 34 136 38 136 62
+C136 80 120 94 100 112Z"
+fill="#76513D"/>
+
+</svg>
+
+</div>
+
+<div class="person-name">Princess</div>
+<div class="person-caption">A LETTER FOR YOU</div>
+
+</a>
+
+
+<!-- RADJ -->
+
+<a href="radj.html" class="person">
+
+<div class="envelope">
+
+<svg viewBox="0 0 200 140">
+
+<rect x="8" y="8" width="184" height="124"
+rx="12" fill="#FFF0E6"
+stroke="#C5A98F" stroke-width="5"/>
+
+<path d="M10 15 L100 85 L190 15"
+fill="none" stroke="#C5A98F"
+stroke-width="5" stroke-linecap="round"/>
+
+<path d="M10 125 L77 70 M190 125 L123 70"
+fill="none" stroke="#C5A98F"
+stroke-width="5" stroke-linecap="round"/>
+
+<path d="M100 112 C80 94 64 80 64 62
+C64 38 91 34 100 55
+C109 34 136 38 136 62
+C136 80 120 94 100 112Z"
+fill="#76513D"/>
+
+</svg>
+
+</div>
+
+<div class="person-name">Radj</div>
+<div class="person-caption">A LETTER FOR YOU</div>
+
+</a>
+
+
+<!-- ANGEL -->
+
+<a href="angel.html" class="person">
+
+<div class="envelope">
+
+<svg viewBox="0 0 200 140">
+
+<rect x="8" y="8" width="184" height="124"
+rx="12" fill="#FFF0E6"
+stroke="#C5A98F" stroke-width="5"/>
+
+<path d="M10 15 L100 85 L190 15"
+fill="none" stroke="#C5A98F"
+stroke-width="5" stroke-linecap="round"/>
+
+<path d="M10 125 L77 70 M190 125 L123 70"
+fill="none" stroke="#C5A98F"
+stroke-width="5" stroke-linecap="round"/>
+
+<path d="M100 112 C80 94 64 80 64 62
+C64 38 91 34 100 55
+C109 34 136 38 136 62
+C136 80 120 94 100 112Z"
+fill="#76513D"/>
+
+</svg>
+
+</div>
+
+<div class="person-name">Angel</div>
+<div class="person-caption">A LETTER FOR YOU</div>
+
+</a>
+
+
+<!-- RAI -->
+
+<a href="rai.html" class="person">
+
+<div class="envelope">
+
+<svg viewBox="0 0 200 140">
+
+<rect x="8" y="8" width="184" height="124"
+rx="12" fill="#FFF0E6"
+stroke="#C5A98F" stroke-width="5"/>
+
+<path d="M10 15 L100 85 L190 15"
+fill="none" stroke="#C5A98F"
+stroke-width="5" stroke-linecap="round"/>
+
+<path d="M10 125 L77 70 M190 125 L123 70"
+fill="none" stroke="#C5A98F"
+stroke-width="5" stroke-linecap="round"/>
+
+<path d="M100 112 C80 94 64 80 64 62
+C64 38 91 34 100 55
+C109 34 136 38 136 62
+C136 80 120 94 100 112Z"
+fill="#76513D"/>
+
+</svg>
+
+</div>
+
+<div class="person-name">Rai</div>
+<div class="person-caption">A LETTER FOR YOU</div>
+
+</a>
+
+
+<!-- SHAI -->
+
+<a href="shai.html" class="person">
+
+<div class="envelope">
+
+<svg viewBox="0 0 200 140">
+
+<rect x="8" y="8" width="184" height="124"
+rx="12" fill="#FFF0E6"
+stroke="#C5A98F" stroke-width="5"/>
+
+<path d="M10 15 L100 85 L190 15"
+fill="none" stroke="#C5A98F"
+stroke-width="5" stroke-linecap="round"/>
+
+<path d="M10 125 L77 70 M190 125 L123 70"
+fill="none" stroke="#C5A98F"
+stroke-width="5" stroke-linecap="round"/>
+
+<path d="M100 112 C80 94 64 80 64 62
+C64 38 91 34 100 55
+C109 34 136 38 136 62
+C136 80 120 94 100 112Z"
+fill="#76513D"/>
+
+</svg>
+
+</div>
+
+<div class="person-name">Shai</div>
+<div class="person-caption">A LETTER FOR YOU</div>
+
+</a>
+
+
+</section>
+
+
+<a href="letters.html" class="back">
+    BACK TO LETTERS
+</a>
+
+
+<footer>
+    DEAR SOLACE · WORDS TO KEEP, WISDOM TO CARRY
+</footer>
+
+</body>
+</html>
