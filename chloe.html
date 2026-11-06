@@ -1,0 +1,467 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A Letter for Chloe | Dear Solace</title>
+
+<style>
+
+/* GENERAL */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #E8D8C5;
+    color: #493528;
+    font-family: "Times New Roman", serif;
+}
+
+/* HEADER */
+
+header {
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #CBB69C;
+}
+
+header h1 {
+    font-size: 25px;
+    font-style: italic;
+    font-weight: normal;
+    margin: 0;
+}
+
+header span {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+/* MAIN CONTAINER */
+
+.container {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+/* RIDDLE PAPER */
+
+.riddle-paper {
+    background: #FFFAF0;
+    width: 100%;
+    max-width: 500px;
+    padding: 50px 40px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* DECORATIVE LINE */
+
+.top-line {
+    width: 45px;
+    height: 1px;
+    background: #A98262;
+    margin: 0 auto 25px;
+}
+
+.label {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #A98262;
+}
+
+.riddle-paper h2 {
+    font-size: 36px;
+    font-style: italic;
+    font-weight: normal;
+    margin: 20px 0;
+}
+
+.intro {
+    font-size: 15px;
+    color: #80614B;
+    margin-bottom: 30px;
+}
+
+/* RIDDLE */
+
+.riddle {
+    font-size: 19px;
+    line-height: 2;
+    color: #655143;
+    font-style: italic;
+    margin: 30px 0;
+}
+
+/* DIVIDER */
+
+.divider {
+    width: 55px;
+    height: 1px;
+    background: #CBB69C;
+    margin: 30px auto;
+}
+
+/* INPUT */
+
+input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #CBB69C;
+    background: #FFFDF8;
+    font-family: "Times New Roman", serif;
+    font-size: 17px;
+    text-align: center;
+    outline: none;
+    color: #493528;
+}
+
+input:focus {
+    border-color: #76513D;
+}
+
+/* BUTTON */
+
+button {
+    background: #76513D;
+    color: #FFFAF0;
+    border: none;
+    padding: 14px 28px;
+    margin-top: 18px;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #52301B;
+}
+
+/* ERROR MESSAGE */
+
+#error {
+    color: #A34D43;
+    font-size: 13px;
+    margin-top: 18px;
+}
+
+/* SECRET LETTER */
+
+#letter {
+    display: none;
+    background: #FFFAF0;
+    width: 85%;
+    max-width: 750px;
+    margin: 60px auto;
+    padding: 55px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* LETTER HEADING */
+
+.letter-label {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #A98262;
+}
+
+#letter h2 {
+    font-size: 38px;
+    font-weight: normal;
+    font-style: italic;
+    margin: 20px 0 40px;
+}
+
+/* LETTER PARAGRAPHS */
+
+#letter p {
+    font-size: 18px;
+    line-height: 1.9;
+    color: #655143;
+    margin-bottom: 25px;
+}
+
+/* SIGNATURE */
+
+.signature {
+    font-style: italic;
+    color: #A98262 !important;
+    margin-top: 40px;
+}
+
+/* BACK BUTTON */
+
+.back {
+    display: block;
+    width: fit-content;
+    margin: 35px auto 0;
+    padding: 13px 25px;
+    background: #76513D;
+    color: #FFFAF0;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #80614B;
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 600px) {
+
+    header h1 {
+        font-size: 21px;
+    }
+
+    header span {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .riddle-paper {
+        padding: 40px 25px;
+    }
+
+    .riddle-paper h2 {
+        font-size: 31px;
+    }
+
+    .riddle {
+        font-size: 17px;
+    }
+
+    #letter {
+        width: 90%;
+        padding: 30px 23px;
+        margin: 40px auto;
+    }
+
+    #letter h2 {
+        font-size: 31px;
+        margin-bottom: 30px;
+    }
+
+    #letter p {
+        font-size: 17px;
+        line-height: 1.8;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <h1>Dear Solace</h1>
+
+    <span>LETTERS FOR THE SOUL</span>
+
+</header>
+
+
+<!-- RIDDLE PAGE -->
+
+<main class="container" id="riddlePage">
+
+    <div class="riddle-paper">
+
+        <div class="top-line"></div>
+
+        <div class="label">
+            A LITTLE CHALLENGE
+        </div>
+
+        <h2>A Riddle for You.</h2>
+
+        <p class="intro">
+            Before you read what's waiting inside,
+            there's something you need to figure out.
+        </p>
+
+        <div class="divider"></div>
+
+        <div class="riddle">
+
+            A story drawn in panels,
+            with characters and tales.
+
+            <br>
+
+            It brought two people together,
+            and gave their friendship a trail.
+
+            <br>
+
+            What is the title of the story
+            that started it all?
+
+        </div>
+
+        <div class="divider"></div>
+
+        <p class="intro">
+            Think carefully, dear reader.
+        </p>
+
+        <input
+            type="password"
+            id="answer"
+            placeholder="Your answer..."
+            autocomplete="off"
+            onkeydown="if(event.key === 'Enter') checkAnswer()"
+        >
+
+        <br>
+
+        <button onclick="checkAnswer()">
+            OPEN MY LETTER
+        </button>
+
+        <p id="error"></p>
+
+    </div>
+
+</main>
+
+
+<!-- CHLOE'S LETTER -->
+
+<section id="letter">
+
+    <div class="letter-label">
+        A LETTER WRITTEN FOR YOU
+    </div>
+
+    <h2>Dear Chloe,</h2>
+
+    <p>
+        I love you so much, and you already know that. But I don't think I'll ever get tired of reminding you.
+    </p>
+
+    <p>
+        Can you believe that we've known each other since Grade 7? And now, here we are, already in Grade 10. It feels a little surreal how quickly time has passed. It seems like just yesterday we were still figuring things out, getting used to our new environment, and slowly building the friendship we have today.
+    </p>
+
+    <p>
+        Looking back, I'm genuinely grateful that I met you. Out of all the people I could've crossed paths with, I'm glad it was you. Thank you for being one of the people who made my school years a little less ordinary. For all the laughs, the random conversations, the silly moments, the stories, and even the memories that might seem insignificant to other people but will always mean something to me.
+    </p>
+
+    <p>
+        I hope you know how much I appreciate you. Not just because you're my best friend, but because you're Chloe. You have your own way of making things better, sometimes without even realizing it. And even on days when things aren't particularly exciting, having you around makes them more memorable.
+    </p>
+
+    <p>
+        We've probably changed a lot since Grade 7. We've grown, learned new things, experienced different situations, and met different versions of ourselves along the way. But one thing I hope never changes is the friendship we've built. I hope we continue to grow alongside each other, even when life eventually takes us in different directions.
+    </p>
+
+    <p>
+        And if there are days when you doubt yourself, I hope you remember that you're appreciated more than you know. You deserve good things, genuine happiness, and people who will always choose to stay in your life. Please don't be too hard on yourself, and never think that you have to face everything alone. You have a friend in me, always.
+    </p>
+
+    <p>
+        I don't know what the coming years have in store for us. Maybe we'll end up in different classrooms, different schools, or even different places someday. Maybe we'll become busier and won't have as much time to talk as we do now. But I hope that, no matter how much things change, we'll still find our way back to each other.
+    </p>
+
+    <p>
+        I want us to have more memories to look back on. More laughter, more stupid jokes, more conversations, more pictures, and more stories that we'll probably laugh about years from now. I hope that when we're older, we'll still remember how our friendship started and how lucky we were to have each other during these years.
+    </p>
+
+    <p>
+        Thank you for staying, Chloe. Thank you for being my best friend since Grade 7 and for making these years something worth remembering.
+    </p>
+
+    <p>
+        I love you so much. More than this letter could ever explain.
+    </p>
+
+    <p>
+        Here's to more years of friendship, more memories, and a lifetime of being each other's favorite headache.
+    </p>
+
+    <p class="signature">
+        With so much love,<br>
+        Your best friend.
+    </p>
+
+    <a href="names.html" class="back">
+        BACK TO ENVELOPES
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+    DEAR SOLACE · WORDS TO KEEP, WISDOM TO CARRY
+</footer>
+
+
+<script>
+
+/* CHECK THE RIDDLE ANSWER */
+
+function checkAnswer() {
+
+    let answer = document
+        .getElementById("answer")
+        .value
+        .trim()
+        .toLowerCase()
+        .replace(/[.!?]+$/, "");
+
+    if (answer === "jinx") {
+
+        document.getElementById("riddlePage")
+            .style.display = "none";
+
+        document.getElementById("letter")
+            .style.display = "block";
+
+        window.scrollTo(0, 0);
+
+    } else {
+
+        document.getElementById("error")
+            .textContent =
+            "Not quite, dear reader. Think about it again.";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
